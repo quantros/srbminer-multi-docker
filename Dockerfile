@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 RUN apt-get update && apt-get -y install wget xz-utils && \
-    cd /opt && wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.1.0/SRBMiner-Multi-2-1-0-Linux.tar.xz && \
-	tar xf SRBMiner-Multi-2-1-0-Linux.tar.xz && rm -rf /opt/SRBMiner-Multi-2-1-0-Linux.tar.xz && \
+    cd /opt && wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.2.0/SRBMiner-Multi-2-2-0-Linux.tar.xz && \
+	tar xf SRBMiner-Multi-2-2-0-Linux.tar.xz && rm -rf /opt/SRBMiner-Multi-2-2-0-Linux.tar.xz && \
 	apt-get -y purge xz-utils && apt-get -y autoremove --purge && apt-get -y clean && apt-get -y autoclean; rm -rf /var/lib/apt-get/lists/*
 ENV ALGO="blake3_ironfish"
 ENV POOL_ADDRESS="36.189.234.195:60006"
